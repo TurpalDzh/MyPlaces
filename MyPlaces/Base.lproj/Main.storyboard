@@ -204,8 +204,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jc7-5S-hpt">
+                                <rect key="frame" x="0.0" y="103" width="393" height="37"/>
+                                <segments>
+                                    <segment title="Date"/>
+                                    <segment title="Name"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="sortSelection:" destination="rfV-Yx-nLD" eventType="valueChanged" id="B6x-bH-0JO"/>
+                                </connections>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="obD-Py-img">
-                                <rect key="frame" x="0.0" y="142" width="393" height="710"/>
+                                <rect key="frame" x="0.0" y="140" width="393" height="710"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -271,24 +282,13 @@
                                     <outlet property="delegate" destination="rfV-Yx-nLD" id="roa-aY-vIx"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jc7-5S-hpt">
-                                <rect key="frame" x="0.0" y="103" width="393" height="39"/>
-                                <segments>
-                                    <segment title="Date"/>
-                                    <segment title="Name"/>
-                                </segments>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <action selector="sortSelection:" destination="rfV-Yx-nLD" eventType="valueChanged" id="B6x-bH-0JO"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6dB-fd-x5N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="obD-Py-img" firstAttribute="top" secondItem="Jc7-5S-hpt" secondAttribute="bottom" constant="1" id="5lu-ZA-j8U"/>
+                            <constraint firstItem="Jc7-5S-hpt" firstAttribute="top" secondItem="6dB-fd-x5N" secondAttribute="top" id="eGz-6v-Rr3"/>
+                            <constraint firstItem="obD-Py-img" firstAttribute="top" secondItem="Jc7-5S-hpt" secondAttribute="bottom" constant="1" id="gDi-IL-MTp"/>
                             <constraint firstItem="Jc7-5S-hpt" firstAttribute="leading" secondItem="6dB-fd-x5N" secondAttribute="leading" id="gTw-mM-5it"/>
-                            <constraint firstItem="Jc7-5S-hpt" firstAttribute="top" secondItem="6dB-fd-x5N" secondAttribute="top" id="oD2-c4-7O3"/>
                             <constraint firstItem="6dB-fd-x5N" firstAttribute="trailing" secondItem="Jc7-5S-hpt" secondAttribute="trailing" id="rwl-rd-WwP"/>
                         </constraints>
                     </view>
